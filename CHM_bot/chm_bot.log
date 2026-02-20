@@ -1,0 +1,107 @@
+2026-02-20 15:28:18 | INFO | 🚀 CHM BREAKER BOT запускается (multi-user режим)...
+2026-02-20 15:28:18 | INFO | Start polling
+2026-02-20 15:28:18 | INFO | 🔄 Мульти-сканер запущен
+2026-02-20 15:28:22 | INFO | Run polling for bot @chm_lab_signals_bot id=8386929967 - 'CHM Bot_signal'
+2026-02-20 15:28:23 | INFO | Новый пользователь: cheese_31 (705020259)
+2026-02-20 15:28:23 | INFO | Новый пользователь: kofman88 (445677777)
+2026-02-20 15:28:26 | INFO | Update id=178228413 is handled. Duration 3370 ms by bot id=8386929967
+2026-02-20 15:28:26 | INFO | Update id=178228412 is handled. Duration 3468 ms by bot id=8386929967
+2026-02-20 15:28:48 | INFO | Update id=178228414 is handled. Duration 3070 ms by bot id=8386929967
+2026-02-20 15:28:53 | INFO | Update id=178228415 is handled. Duration 1992 ms by bot id=8386929967
+2026-02-20 15:28:58 | INFO | Update id=178228416 is handled. Duration 2415 ms by bot id=8386929967
+2026-02-20 15:29:18 | INFO | 🔍 Скан для kofman88 (TF=5m)
+2026-02-20 15:29:18 | INFO | 🌐 Загружаю список всех монет с OKX...
+2026-02-20 15:29:23 | INFO | Update id=178228417 is handled. Duration 3464 ms by bot id=8386929967
+2026-02-20 15:29:25 | INFO |   Найдено активных USDT пар: 258
+2026-02-20 15:29:26 | INFO |   После фильтра по объёму: 224 монет
+2026-02-20 15:29:29 | INFO | Update id=178228418 is handled. Duration 2588 ms by bot id=8386929967
+2026-02-20 15:29:34 | INFO | Update id=178228419 is handled. Duration 1053 ms by bot id=8386929967
+2026-02-20 15:29:46 | INFO | Update id=178228420 is handled. Duration 2739 ms by bot id=8386929967
+2026-02-20 15:29:56 | INFO | Update id=178228421 is handled. Duration 958 ms by bot id=8386929967
+2026-02-20 15:30:03 | INFO | Update id=178228422 is handled. Duration 2558 ms by bot id=8386929967
+2026-02-20 15:30:05 | INFO | Update id=178228423 is handled. Duration 3250 ms by bot id=8386929967
+2026-02-20 15:30:18 | INFO | Update id=178228424 is handled. Duration 1369 ms by bot id=8386929967
+2026-02-20 15:30:22 | INFO | Update id=178228425 is handled. Duration 2356 ms by bot id=8386929967
+2026-02-20 15:30:24 | INFO | Update id=178228426 is handled. Duration 2436 ms by bot id=8386929967
+2026-02-20 15:30:26 | INFO | Update id=178228427 is handled. Duration 2843 ms by bot id=8386929967
+2026-02-20 15:30:26 | INFO | Update id=178228428 is handled. Duration 1988 ms by bot id=8386929967
+2026-02-20 15:30:30 | INFO | Update id=178228430 is handled. Duration 2395 ms by bot id=8386929967
+2026-02-20 15:30:30 | INFO | Update id=178228429 is not handled. Duration 4249 ms by bot id=8386929967
+2026-02-20 15:30:30 | ERROR | Cause exception while process update id=178228429 by bot id=8386929967
+TelegramBadRequest: Telegram server says - Bad Request: message is not modified: specified new message content and reply markup are exactly the same as a current content and reply markup of the message
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/aiogram/dispatcher/dispatcher.py", line 320, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/aiogram/dispatcher/dispatcher.py", line 164, in feed_update
+    response = await self.update.wrap_outer_middleware(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    )
+    ^
+  File "/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/aiogram/dispatcher/middlewares/error.py", line 27, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/aiogram/dispatcher/middlewares/user_context.py", line 58, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/aiogram/fsm/middleware.py", line 43, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/aiogram/dispatcher/event/telegram.py", line 126, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/aiogram/dispatcher/event/handler.py", line 71, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/aiogram/dispatcher/dispatcher.py", line 283, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/aiogram/dispatcher/router.py", line 161, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/aiogram/dispatcher/router.py", line 153, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<4 lines>...
+    )
+    ^
+  File "/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/aiogram/dispatcher/router.py", line 181, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/aiogram/dispatcher/event/telegram.py", line 126, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/aiogram/dispatcher/event/handler.py", line 71, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "/Users/alexey/Desktop/CHM_bot/handlers.py", line 148, in toggle_volume
+    await cb.message.edit_reply_markup(reply_markup=kb_filters(user))
+  File "/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/aiogram/methods/base.py", line 82, in emit
+    return await bot(self)
+           ^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/aiogram/client/bot.py", line 484, in __call__
+    return await self.session(self, method, timeout=request_timeout)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/aiogram/client/session/base.py", line 259, in __call__
+    return cast(TelegramType, await middleware(bot, method))
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/aiogram/client/session/aiohttp.py", line 177, in make_request
+    response = self.check_response(
+        bot=bot,
+    ...<2 lines>...
+        content=raw_result,
+    )
+  File "/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/aiogram/client/session/base.py", line 121, in check_response
+    raise TelegramBadRequest(method=method, message=description)
+aiogram.exceptions.TelegramBadRequest: Telegram server says - Bad Request: message is not modified: specified new message content and reply markup are exactly the same as a current content and reply markup of the message
+2026-02-20 15:30:34 | INFO | Update id=178228431 is handled. Duration 2557 ms by bot id=8386929967
+2026-02-20 15:30:35 | INFO | Update id=178228432 is handled. Duration 2534 ms by bot id=8386929967
+2026-02-20 15:30:37 | INFO | Update id=178228433 is handled. Duration 1100 ms by bot id=8386929967
+2026-02-20 15:30:40 | INFO | Update id=178228434 is handled. Duration 2573 ms by bot id=8386929967
+2026-02-20 15:30:40 | INFO | Update id=178228435 is handled. Duration 1330 ms by bot id=8386929967
+2026-02-20 15:30:45 | INFO | Update id=178228436 is handled. Duration 2334 ms by bot id=8386929967
+2026-02-20 15:30:48 | INFO | Update id=178228437 is handled. Duration 1150 ms by bot id=8386929967
+2026-02-20 15:31:23 | INFO |   → kofman88: найдено 0 сигналов
+2026-02-20 15:31:33 | INFO | Update id=178228438 is handled. Duration 4010 ms by bot id=8386929967
+2026-02-20 15:31:42 | INFO | Update id=178228439 is handled. Duration 2218 ms by bot id=8386929967
